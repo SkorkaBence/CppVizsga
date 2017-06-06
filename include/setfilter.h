@@ -26,44 +26,19 @@ public:
     }
 
     void filter(T filt) {
-        /*typename std::set<T, S>::iterator it = std::find(mainset.begin(), mainset.end(), filt);
-        if (it != mainset.end()) {
-            T elm = *it;
-            filtered.insert(elm);
-            mainset.erase(it);
-        }*/
         typename std::set<T, S>::iterator it = mainset.find(filt);
         if (it != mainset.end()) {
             T elm = *it;
             filtered.insert(elm);
             mainset.erase(it);
         }
-        /*for(typename std::set<T, S>::iterator it = mainset.begin(); it != mainset.end();) {
-            T elm = *it;
-            //if (elm == filt) {
-            if (!sorter(elm, filt) && !sorter(filt, elm)) {
-                filtered.insert(elm);
-                mainset.erase(it++);
-            } else {
-                it++;
-            }
-        }*/
     }
     void unfilter(T filt) {
-        /*typename std::set<T, S>::iterator it = std::find(filtered.begin(), filtered.end(), filt);
+        typename std::set<T, S>::iterator it = filtered.find(filt);
         if (it != filtered.end()) {
             T elm = *it;
             mainset.insert(elm);
             filtered.erase(it);
-        }*/
-        for(typename std::set<T, S>::iterator it = filtered.begin(); it != filtered.end();) {
-            T elm = *it;
-            if (!sorter(elm, filt) && !sorter(filt, elm)) {
-                mainset.insert(elm);
-                filtered.erase(it++);
-            } else {
-                it++;
-            }
         }
     }
     void inverse() {
