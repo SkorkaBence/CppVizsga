@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1496768421 source:d:\onedrive - eotvos lorand tudomanyegyetem\ii\prognyelvekcpp\cppvizsga\main.cpp
+	<set>
+	<iostream>
+	"setfilter.h"
+	<string>
+	"setfilter.h"
+
+1496768695 d:\onedrive - eotvos lorand tudomanyegyetem\ii\prognyelvekcpp\cppvizsga\include\setfilter.h
+	<set>
+	<string>
+	<algorithm>
+
+1496760478 source:d:\onedrive - eotvos lorand tudomanyegyetem\ii\prognyelvekcpp\cppvizsga\src\setfilter.cpp
+	"setfilter.h"
+	<set>
+
+1496764319 d:\onedrive - eotvos lorand tudomanyegyetem\ii\prognyelvekcpp\cppvizsga\include\setfilter.hpp
+
