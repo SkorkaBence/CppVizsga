@@ -10,12 +10,9 @@ class set_filtering {
 private:
     std::set<T, S>& mainset;
     std::set<T, S> filtered;
-    S sorter;
 
 public:
-    set_filtering(std::set<T, S>& default_set) : mainset(default_set) {
-        sorter = S();
-    };
+    set_filtering(std::set<T, S>& default_set) : mainset(default_set) {};
 
     ~set_filtering() {
         for(typename std::set<T, S>::iterator it = filtered.begin(); it != filtered.end();) {
@@ -33,6 +30,7 @@ public:
             mainset.erase(it);
         }
     }
+
     void unfilter(T filt) {
         typename std::set<T, S>::iterator it = filtered.find(filt);
         if (it != filtered.end()) {
@@ -41,6 +39,7 @@ public:
             filtered.erase(it);
         }
     }
+
     void inverse() {
         std::set<T, S> temp = filtered;
         filtered = mainset;
